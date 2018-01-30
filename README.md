@@ -77,3 +77,24 @@ Configure Content Delivery Network  (CDN)
 - We can create a new CDN to serve files, which is a resource, and add an endpoint to it. 
 - We pick a name for our endpoint (a unique url - something..azureedge.net), an origin type (at this point we'll choose "Storage"). We choose an origin hostname, an origin path (should be the name of the container)  
 <img src="./images/cdn.png" width="200px">
+- So now we can hit directly the url publicfiles.azureedge.net/nameofourfile.pdf and download the file
+
+Design Blob Hierarchies (create directories - subdirectories)
+
+```csharp
+static void UploadBlobSubdirectory(CloudBlobContainer container)
+{
+  CloudBlobDirectory directory = container.GetDirectoryReference("parent-directory");
+  CloudBlockBlob blockBlob = directory.GetBlockBlobReference("newexamobjectives");
+  CloudBlockBlob blockBlob = subdirectory.GetBlockBlobReference("newexamobjectives");
+
+  using (var fileStream = System.IO.File.OpenRead(@"LOCAL_PATH"))
+  {
+    blockBlob.UploadFromStream(fileStream);
+  }
+}
+```
+
+Configure Custom Domains
+
+- You can customize the domain through CNAME record and the setting is in Azure Portal.
