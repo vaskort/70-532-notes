@@ -1,5 +1,3 @@
-Reference ikea new reference: AS-P6203354 
-
 Input from facebook
 -------------------
 First attempt at the 70-532 yesterday. Scored 675. I was so close! There were about 60-70% coding related questions on Service Fabric, Tuning Cosmos DB, ARM templates parameters, Active Directory B2B and B2C, Mobile App Services. There were also questions on the Open source Paas offering such as Pivotal Cloud Foundry, Open Shift etc. I have already scheduled my 2nd attempt in the next two weeks. Here is my plan to study:
